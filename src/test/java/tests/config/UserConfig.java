@@ -10,10 +10,10 @@ import org.aeonbits.owner.Config;
 
 public interface UserConfig extends Config {
 
-    @Key("userName")
+    @Key("user")
     String getUserName();
 
-    @Key("accessKey")
+    @Key("access")
     String getAccessKey();
 
 }
