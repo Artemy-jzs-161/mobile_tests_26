@@ -4,7 +4,8 @@ package tests.config;
 import org.aeonbits.owner.Config;
 
 @Config.Sources({
-        "classpath:user.properties"
+        "classpath:user.properties",
+        "system:properties"
 })
 
 public interface UserConfig extends Config {

@@ -4,7 +4,9 @@ package tests.config;
 import org.aeonbits.owner.Config;
 
 @Config.Sources({
-        "classpath:browserstack.properties"
+        "classpath:browserstack.properties",
+        "system:properties"
+
 })
 
 public interface BrowserstackConfig extends Config {

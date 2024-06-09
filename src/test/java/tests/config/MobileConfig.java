@@ -4,18 +4,18 @@ import org.aeonbits.owner.Config;
 
 @Config.Sources({
         "classpath:android.properties"
-        /*   "classpath:ios.properties"*/
+        //"classpath:ios.properties"
 })
 
 public interface MobileConfig extends Config {
 
-    @Key("deviceModel")
+    @Key("device")
     String getDeviceModel();
 
-    @Key("deviceVersion")
+    @Key("os_version")
     String getDeviceVersion();
 
-    @Key("appUrl")
+    @Key("appURL")
     String getAppUrl();
 
 }

@@ -12,13 +12,12 @@ public class Browserstack {
 
         String url = String.format("https://api.browserstack.com/app-automate/sessions/%s.json", sessionId);
         return given()
+                .log().all()
                 .auth().basic(userConfig.getUserName(), userConfig.getAccessKey())
+                .when()
                 .get(url)
                 .then()
-                .log().status()
-                .log().body()
                 .statusCode(200)
-                .extract()
-                .path("automation_session.video_url");
+                .extract().path("automation_session.video_url");
     }
 }
