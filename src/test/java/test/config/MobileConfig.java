@@ -2,9 +2,9 @@ package test.config;
 
 import org.aeonbits.owner.Config;
 
-@Config.Sources({
-        "classpath:android.properties",
-        "classpath:ios.properties"})
+@Config.LoadPolicy(Config.LoadType.MERGE)
+@Config.Sources({"system:properties",
+        "classpath:config/${platform}.properties"})
 
 public interface MobileConfig extends Config {
 

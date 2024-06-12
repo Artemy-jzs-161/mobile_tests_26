@@ -16,6 +16,7 @@ public class IOSTests extends TestBase {
             $(AppiumBy.className("XCUIElementTypeStaticText")).$(AppiumBy.name("UI Elements")).should(exist);
             $(AppiumBy.name("Text Button")).shouldBe(Condition.visible);
             $(AppiumBy.name("Text")).shouldBe(Condition.visible);
+            $(AppiumBy.name("Tab Bar")).should(exist);
         });
     }
 }
