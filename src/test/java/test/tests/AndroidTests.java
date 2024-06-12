@@ -9,10 +9,11 @@ import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
-@Tag("android_tests")
+@Tag("android")
 public class AndroidTests extends TestBase {
 
     @Test
+    @Tag("android")
     @DisplayName("Проверка наличия элементов в результатах поиска")
     void successfulSearchAppiumTest() {
         step("Ввести в строку поиска значение Appium", () -> {
@@ -26,6 +27,7 @@ public class AndroidTests extends TestBase {
     }
 
     @Test
+    @Tag("android")
     @DisplayName("Проверка наличия элементов в результатах поиска")
     void successfulSearchJavaTest() {
         step("Ввести в строку поиска значение Java", () -> {

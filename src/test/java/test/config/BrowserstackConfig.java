@@ -3,13 +3,23 @@ package test.config;
 
 import org.aeonbits.owner.Config;
 
-@Config.Sources({
-        "classpath:browserstack.properties",
-        "system:properties"
-
-})
-
+@Config.Sources({"classpath:${envMobile}.properties"})
 public interface BrowserstackConfig extends Config {
+
+    @Key("user")
+    String getUserName();
+
+    @Key("access")
+    String getAccessKey();
+
+    @Key("device")
+    String getDeviceModel();
+
+    @Key("os_version")
+    String getDeviceVersion();
+
+    @Key("appURL")
+    String getAppUrl();
 
     @Key("project")
     String getProject();

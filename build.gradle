@@ -54,6 +54,10 @@ dependencies {
     testImplementation "commons-codec:commons-codec:$commons"
 }
 
+test {
+    useJUnitPlatform()
+}
+
 tasks.withType(Test) {
     useJUnitPlatform()
     systemProperties(System.getProperties())
@@ -67,12 +71,11 @@ tasks.withType(Test) {
 
 task android(type: Test) {
     useJUnitPlatform {
-        includeTags("android_tests")
+        includeTags("android")
     }
 }
-
 task ios(type: Test) {
     useJUnitPlatform {
-        includeTags("ios_tests")
+        includeTags("ios")
     }
 }
