@@ -8,7 +8,6 @@ import static com.codeborne.selenide.Condition.exist;
 import static com.codeborne.selenide.Selenide.$;
 import static io.qameta.allure.Allure.step;
 
-@Tag("ios")
 public class IOSTests extends TestBase {
     @Test
     @DisplayName("Проверка элементов на странице")

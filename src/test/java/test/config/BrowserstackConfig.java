@@ -3,7 +3,7 @@ package test.config;
 
 import org.aeonbits.owner.Config;
 
-@Config.Sources({"classpath:${envMobile}.properties"})
+@Config.Sources({"classpath:${env}.properties"})
 public interface BrowserstackConfig extends Config {
 
     @Key("user")
