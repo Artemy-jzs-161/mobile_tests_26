@@ -6,3 +6,14 @@
 -* Адаптировать TestBase / Driver для работы с двумя типами платформ - Android, iOS
 - Вынести данные (логин, пароль, урл браузерстека и т.д.) в .properties с owner
 - Сделать сборку в дженкинсе
+
+
+Для запуска тестов на ОС android:
+```shell
+gradle clean android -Denv=android
+```
+
+Для запуска тестов на ОС ios:
+```shell
+gradle clean ios -Denv=ios
+```
