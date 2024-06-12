@@ -14,7 +14,8 @@ public class IOSTests extends TestBase {
     @Tag("ios")
     void verifyMainPageElementsExistingTest() {
         step("Проверка отображения элементов на главной странице", () -> {
-            $(AppiumBy.className("XCUIElementTypeStaticText")).$(AppiumBy.name("UI Elements")).should(exist);
+            $(AppiumBy.className("XCUIElementTypeStaticText"))
+                    .$(AppiumBy.name("UI Elements")).should(exist);
             $(AppiumBy.name("Text Button")).shouldBe(Condition.visible);
             $(AppiumBy.name("Text")).shouldBe(Condition.visible);
             $(AppiumBy.name("Tab Bar")).should(exist);

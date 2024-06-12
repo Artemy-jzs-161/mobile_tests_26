@@ -6,7 +6,8 @@ import test.config.BrowserstackConfig;
 import static io.restassured.RestAssured.given;
 
 public class Browserstack {
-    static final BrowserstackConfig browserstackConfig = ConfigFactory.create(BrowserstackConfig.class, System.getProperties());
+    static final BrowserstackConfig browserstackConfig = ConfigFactory
+            .create(BrowserstackConfig.class, System.getProperties());
 
     public static String getVideoUrl(String sessionId) {
 

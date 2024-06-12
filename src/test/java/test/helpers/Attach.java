@@ -2,13 +2,11 @@ package test.helpers;
 
 import com.codeborne.selenide.Selenide;
 import io.qameta.allure.Attachment;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import static org.openqa.selenium.logging.LogType.BROWSER;
-
+import org.openqa.selenium.*;
 
 import java.nio.charset.StandardCharsets;
 
+import static org.openqa.selenium.logging.LogType.BROWSER;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 public class Attach {
