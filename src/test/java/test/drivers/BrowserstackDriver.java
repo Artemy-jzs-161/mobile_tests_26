@@ -1,14 +1,12 @@
-package tests.drivers;
+package test.drivers;
 
 import com.codeborne.selenide.WebDriverProvider;
 import org.aeonbits.owner.ConfigFactory;
-import org.checkerframework.checker.units.qual.C;
 import org.openqa.selenium.*;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import tests.config.BrowserstackConfig;
-import tests.config.MobileConfig;
-import tests.config.UserConfig;
-import tests.helpers.Browserstack;
+import test.config.BrowserstackConfig;
+import test.config.MobileConfig;
+import test.config.UserConfig;
 
 import javax.annotation.Nonnull;
 import java.net.MalformedURLException;

@@ -1,4 +1,4 @@
-package tests.config;
+package test.config;
 
 
 import org.aeonbits.owner.Config;

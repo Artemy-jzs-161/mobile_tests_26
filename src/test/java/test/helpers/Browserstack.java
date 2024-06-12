@@ -1,7 +1,7 @@
-package tests.helpers;
+package test.helpers;
 
 import org.aeonbits.owner.ConfigFactory;
-import tests.config.UserConfig;
+import test.config.UserConfig;
 
 import static io.restassured.RestAssured.given;
 

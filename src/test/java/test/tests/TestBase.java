@@ -1,11 +1,11 @@
-package tests;
+package test.tests;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
 
-import tests.drivers.BrowserstackDriver;
-import tests.helpers.Attach;
+import test.drivers.BrowserstackDriver;
+import test.helpers.Attach;
 import org.junit.jupiter.api.*;
 
 import static com.codeborne.selenide.Selenide.*;
