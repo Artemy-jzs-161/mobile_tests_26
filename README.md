@@ -17,3 +17,11 @@ gradle clean android -Denv=android
 ```shell
 gradle clean ios -Denv=ios
 ```
+
+Для запуска тестов на ОС ios:
+```shell
+gradle clean ios -Denv=ios
+```
+
+* <a href="https://jenkins.autotests.cloud/job/Artemy-jzs-161_mobile_tests_26_browserstack/">Jenkins</a>
+
