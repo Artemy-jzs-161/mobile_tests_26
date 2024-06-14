@@ -1,6 +1,8 @@
-package test.tests;
+package test.tests.browserstack;
 
 import io.appium.java_client.AppiumBy;
+import test.tests.TestBase;
+
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
