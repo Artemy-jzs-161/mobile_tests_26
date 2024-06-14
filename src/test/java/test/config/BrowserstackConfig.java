@@ -2,32 +2,32 @@ package test.config;
 
 import org.aeonbits.owner.Config;
 
-@Config.Sources({"classpath:${env}.properties"})
+@Config.Sources({"classpath:${envMobile}.properties"})
 public interface BrowserstackConfig extends Config {
     @Key("user")
-    String getUserName();
+    String userName();
 
     @Key("access")
-    String getAccessKey();
+    String accessKey();
 
     @Key("device")
-    String getDeviceModel();
+    String deviceModel();
 
     @Key("os_version")
-    String getDeviceVersion();
+    String deviceVersion();
 
     @Key("appURL")
-    String getAppUrl();
+    String appUrl();
 
     @Key("project")
-    String getProject();
+    String project();
 
     @Key("build")
-    String getBuild();
+    String build();
 
     @Key("name")
-    String getName();
+    String name();
 
     @Key("URL")
-    String getURL();
+    String URL();
 }

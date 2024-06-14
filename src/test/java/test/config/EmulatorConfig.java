@@ -2,7 +2,7 @@ package test.config;
 
 import org.aeonbits.owner.Config;
 
-@Config.Sources({"classpath:${env}.properties"})
+@Config.Sources({"classpath:${envMobile}.properties"})
 public interface EmulatorConfig  extends Config {
     @Key("appiumServer")
     String appiumServer();

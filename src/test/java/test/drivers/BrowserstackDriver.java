@@ -18,18 +18,18 @@ public class BrowserstackDriver implements WebDriverProvider {
     public WebDriver createDriver(@Nonnull Capabilities capabilities) {
         MutableCapabilities caps = new MutableCapabilities();
 
-        caps.setCapability("browserstack.user", browserstackConfig.getUserName());
-        caps.setCapability("browserstack.key", browserstackConfig.getAccessKey());
-        caps.setCapability("app", browserstackConfig.getAppUrl());
-        caps.setCapability("device", browserstackConfig.getDeviceModel());
-        caps.setCapability("os_version", browserstackConfig.getDeviceVersion());
-        caps.setCapability("project", browserstackConfig.getProject());
-        caps.setCapability("build", browserstackConfig.getBuild());
-        caps.setCapability("name", browserstackConfig.getName());
+        caps.setCapability("browserstack.user", browserstackConfig.userName());
+        caps.setCapability("browserstack.key", browserstackConfig.accessKey());
+        caps.setCapability("app", browserstackConfig.appUrl());
+        caps.setCapability("device", browserstackConfig.deviceModel());
+        caps.setCapability("os_version", browserstackConfig.deviceVersion());
+        caps.setCapability("project", browserstackConfig.project());
+        caps.setCapability("build", browserstackConfig.build());
+        caps.setCapability("name", browserstackConfig.name());
 
         try {
             return new RemoteWebDriver(
-                    new URL(browserstackConfig.getURL()), caps);
+                    new URL(browserstackConfig.URL()), caps);
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }

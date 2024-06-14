@@ -14,19 +14,13 @@ import org.junit.jupiter.api.*;
 import static com.codeborne.selenide.Selenide.*;
 
 public class TestBase {
-    public static String deviceHost = System.getProperty("deviceHost", "browserstack");
+    public static String deviceHost = System.getProperty("deviceHost");
 
     @BeforeAll
     static void beforeAll() throws Exception {
         switch (deviceHost) {
-            case "browserstack":
-                Configuration.browser = BrowserstackDriver.class.getName();
-                break;
-            case "emulation":
-                Configuration.browser = EmulatorDriver.class.getName();
-                break;
-            default:
-                throw new Exception("Unrecognised deviceHost");
+            case "browserstack" -> Configuration.browser = BrowserstackDriver.class.getName();
+            case "emulation" -> Configuration.browser = EmulatorDriver.class.getName();
         }
         Configuration.browserSize = null;
     }
@@ -41,7 +35,6 @@ public class TestBase {
     void addAttachments() {
         String sessionId = sessionId().toString();
         Attach.pageSource();
-
         if (deviceHost.equals("browserstack")) {
             Attach.addVideo(sessionId);
         }
