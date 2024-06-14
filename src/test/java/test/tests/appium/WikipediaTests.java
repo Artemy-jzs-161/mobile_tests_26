@@ -17,7 +17,7 @@ public class WikipediaTests extends TestBase {
             "Java", "Appium"
     })
     @ParameterizedTest(name = "Проверка наличия элементов в результатах поиска {0}")
-    @Tag("emulator111")
+    @Tag("emulator")
     void successfulSearchTest(String searchQuery) {
         back();
         step("Ввести в строку поиска значение {0}", () -> {
