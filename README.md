@@ -43,6 +43,3 @@ gradle clean ios -DdeviceHost=browserstack -DenvMobile=ios
 ```shell
 gradle clean emulator -DdeviceHost=emulation -DenvMobile=emulator
 ```
-
-* <a href="https://jenkins.autotests.cloud/job/Artemy-jzs-161_emulator_and_browserstack/">Jenkins</a>
-
