@@ -1,7 +1,9 @@
-package test.tests;
+package test.tests.browserstack;
 
 import com.codeborne.selenide.Condition;
 import io.appium.java_client.AppiumBy;
+import test.tests.TestBase;
+
 import org.junit.jupiter.api.*;
 
 import static com.codeborne.selenide.Condition.exist;

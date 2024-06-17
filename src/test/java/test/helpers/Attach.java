@@ -1,12 +1,10 @@
 package test.helpers;
 
-import com.codeborne.selenide.Selenide;
 import io.qameta.allure.Attachment;
 import org.openqa.selenium.*;
 
 import java.nio.charset.StandardCharsets;
 
-import static org.openqa.selenium.logging.LogType.BROWSER;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 public class Attach {
@@ -25,17 +23,10 @@ public class Attach {
         return message;
     }
 
-    public static void browserConsoleLogs() {
-        attachAsText(
-                "Browser console logs",
-                String.join("\n", Selenide.getWebDriverLogs(BROWSER))
-        );
-    }
-
     @Attachment(value = "Video", type = "text/html", fileExtension = ".html")
     public static String addVideo(String sessionId) {
         return "<html><body><video width='100%' height='100%' controls autoplay><source src='"
-                + Browserstack.getVideoUrl(sessionId)
+                + Browserstack.videoUrl(sessionId)
                 + "' type='video/mp4'></video></body></html>";
     }
 }
