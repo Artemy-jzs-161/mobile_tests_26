@@ -25,7 +25,7 @@ public class WikipediaTests extends TestBase {
             $(AppiumBy.id("org.wikipedia.alpha:id/search_src_text")).sendKeys(searchQuery);
         });
         step("Проверить, что контент найден", () ->
-                $$(AppiumBy.id("org.wikipedia.alpha:id/TODO"))
+                $$(AppiumBy.id("org.wikipedia.alpha:id/page_list_item_title"))
                         .shouldHave(sizeGreaterThan(0)));
     }
 
