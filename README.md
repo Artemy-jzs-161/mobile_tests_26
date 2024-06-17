@@ -31,11 +31,11 @@ appium server --base-path /wd/hub
 4. Доработать возможность запуска на разных стендах (передать из командной строки -DdeviceHost=browserstack / emulation / real
 Для каждого сделать драйвер и конфиг с owner
 
-Для запуска тестов Browserstack на ОС android:
+Для запуска тестов в Browserstack на ОС android:
 ```shell
 gradle clean android -DdeviceHost=browserstack -DenvMobile=android
 ```
-Для запуска тестов на ОС ios:
+Для запуска тестов в Browserstack на ОС ios:
 ```shell
 gradle clean ios -DdeviceHost=browserstack -DenvMobile=ios
 ```
